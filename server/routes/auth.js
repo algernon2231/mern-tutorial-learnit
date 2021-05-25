@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 const verifyToken = require('../middleware/auth');
 
 
-// @route GET api/auth/register
+// @route GET api/auth
 router.get('/',verifyToken, async (req,res) => {
     try {
         const user = await User.findById(req.userId).select('-password') ;
