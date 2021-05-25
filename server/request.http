@@ -1,0 +1,47 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username":"jimmy",
+    "password":"jimmy"
+}
+
+
+
+######
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username":"dongocanh",
+    "password":"dongocanh"
+}
+
+######
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGE4YWQyYmM1NjFhODJkODBkMjM4ODYiLCJpYXQiOjE2MjE2NjcxMTZ9.fFHIKoqEBJnLFBp6hMjCprAE3yqxLs8OHesDki8IZIU
+
+{   
+    "title":"React Native",
+    "description":"React Native Course",
+    "url":"reactnative.com",
+    "status":"TO LEARN"
+
+}
+
+#####
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGE4OTU0MDNlNmMzYjA0YzA3ZmFkZjIiLCJpYXQiOjE2MjE2NzQ0OTB9.3_sVB4A_pxwZ_1tYubpO_TmW9pWEVl-Fu8ww9qz33kg
+
+#####
+PUT http://localhost:5000/api/posts/60a8a8c504280d0af8557b8e
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGE4OTU0MDNlNmMzYjA0YzA3ZmFkZjIiLCJpYXQiOjE2MjE2NzQ0OTB9.3_sVB4A_pxwZ_1tYubpO_TmW9pWEVl-Fu8ww9qz33kg
+
+{
+    "title": "Vue",
+    "description" : "VUEEEEEE",
+    "url":"vue.org",
+    "status": "LEARNING"
+}
